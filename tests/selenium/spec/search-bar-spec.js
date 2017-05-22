@@ -25,7 +25,7 @@ describe('navigation bar search spec', () => {
     expect(navPage.areSearchResultsPresent()).toBe(true);
   });
 
-  util.itNoPhantom('does search on mobile browser sizes', () => {
+  util.itNoChromeHeadless('does search on mobile browser sizes', () => {
     navPage.resizeXsmall();
 
     navPage.clickMobileSearch();
