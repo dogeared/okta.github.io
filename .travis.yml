@@ -19,6 +19,10 @@ script: ./scripts/travis.sh
 sudo: required
 dist: trusty
 
+cache:
+  directories:
+  - /usr/bin
+
 addons:
   sauce_connect: true
 
