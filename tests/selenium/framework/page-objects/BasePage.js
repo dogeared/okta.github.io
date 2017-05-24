@@ -85,6 +85,7 @@ class BasePage {
   // max-width: 767px -> small
   // max-width: 479px -> xSmall
   // max-width: 319px -> xxSmall
+  // setSize() calls fail on headless chrome due to chromedriver issue
   resizeMedium() {
     if (!process.env.CHROME_HEADLESS) {
       browser.driver.manage().window().setSize(1060, 640);

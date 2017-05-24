@@ -17,8 +17,8 @@ util.isOnScreen = function (elementFinder) {
   };
 }
 
-util.itNoChromeHeadless = function(desc, fn) {
-  if (process.env.CHROME_HEADLESS) {
+util.itNoHeadless = function(desc, fn) {
+  if (process.env.CHROME_HEADLESS || process.env.PHANTOMJS) {
     xit(desc, fn);
   } else {
     it(desc, fn);

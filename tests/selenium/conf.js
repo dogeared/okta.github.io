@@ -37,6 +37,15 @@ if (process.env.CHROME_HEADLESS) {
   }
 }
 
+// Run PhantomJS for pull requests in bacon
+else if (process.env.PHANTOMJS) {
+  console.log('-- Using phantom --');
+  config.capabilities = {
+    browserName: 'phantomjs',
+    seleniumAddress: 'http://localhost:4444/wd/hub'
+  }
+}
+
 // Run SauceLabs on master branch and internal topic branches
 else if (process.env.TRAVIS) {
   console.log('-- Using SauceLabs --');

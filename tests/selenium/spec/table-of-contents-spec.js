@@ -21,7 +21,7 @@ describe('table of contents navigation spec', () => {
     expect(tocPage.level2ItemsContain(expectedLevel2Items)).toBe(true);
   });
 
-  util.itNoChromeHeadless('has table of contents with multi level items', () => {
+  util.itNoHeadless('has table of contents with multi level items', () => {
     sideBarPage.clickMFAUseCase();
     expect(sideBarPage.getCurrentURL()).toBe('/use_cases/mfa/');
     expect(tocPage.level1ItemContains('Multi-Factor Authentication')).toBe(true);
