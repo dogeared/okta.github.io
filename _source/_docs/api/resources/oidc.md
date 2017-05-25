@@ -59,7 +59,7 @@ The claims requested by the `profile`, `email`, `address`, and `phone` scope val
 
 OpenID Connect uses scope values to specify what access privileges are being requested for Access Tokens.
 The scopes associated with Access Tokens determine which claims are available when they are used
-to access [the OIDC `userinfo` endpoint](http://developer.okta.com/docs/api/resources/oidc.html#get-user-information). The following scopes are supported:
+to access [the OIDC `userinfo` endpoint](/docs/api/resources/oidc.html#get-user-information). The following scopes are supported:
 
 |--------------+--------------------------------------------------------------------------------|--------------|
 | Property     | Description                                                                    | Required     |

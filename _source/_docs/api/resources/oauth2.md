@@ -79,7 +79,7 @@ flows defined by [the OAuth 2.0 spec](http://oauth.net/documentation), you may w
 ## Custom User Experience
 
 By default, the Authorization Endpoint displays the Okta login page and authenticates users if they don't have an existing session.
-If you prefer to use a fully customized user experience, you can instead authenticate the user via the [Authentication API](http://developer.okta.com/docs/api/resources/authn.html).
+If you prefer to use a fully customized user experience, you can instead authenticate the user via the [Authentication API](/docs/api/resources/authn.html).
 This authentication method produces a `sessionToken` which can be passed into the Authorize Endpoint, and the user won't see an Okta login page.
 
 ## Access Token

@@ -32,7 +32,7 @@ xxx.  -->
 
 ### Platform Bugs Fixed
 
- * Request to [`/api/v1/authn/factors/<factorId>/verify`](http://developer.okta.com/docs/api/resources/authn.html#enroll-factor) responded with a valid `stateToken` after user status
+ * Request to [`/api/v1/authn/factors/<factorId>/verify`](/docs/api/resources/authn.html#enroll-factor) responded with a valid `stateToken` after user status
  became `LOCKED_OUT`, causing user interface errors. (OKTA-115153)
  * The AuthSJ SDK produced a debug log message with some browsers. (OKTA-115460)
 
