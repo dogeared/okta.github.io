@@ -35,8 +35,8 @@
   <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
   <title>Okta Sign-In Widget | Okta Developer</title>
   <meta name="description" content="Quickstart guide for using the Okta Sign-In Widget with PHP.">
-  <link rel="canonical" href="http://developer.okta.com/code/php/quickstart-signin-widget">
-  <link rel="alternate" type="application/rss+xml" title="Okta Developer" href="http://developer.okta.com/feed.xml"><!-- GA -->
+  <link rel="canonical" href="https://developer.okta.com/code/php/quickstart-signin-widget">
+  <link rel="alternate" type="application/rss+xml" title="Okta Developer" href="https://developer.okta.com/feed.xml"><!-- GA -->
 </head>
 
 <body>
@@ -74,12 +74,12 @@
                 </div>
               </li>
             </ul>
-            <form id="form_search" method="get" action="http://developer.okta.com/search/" name="form_search">
+            <form id="form_search" method="get" action="/search/" name="form_search">
               <input type="text" name="q" id="q" autocomplete="off">
             </form>
           </div>
           <div id="mobile-nav">
-            <a id="mobile-search" href="http://developer.okta.com/search/"><span class="icon-search-light"></span></a>
+            <a id="mobile-search" href="/search/"><span class="icon-search-light"></span></a>
             <a id="mobile-open" class="mobile-toggle" href="#top-nav">
               <span></span>
               <span></span>
@@ -535,7 +535,7 @@ if($res-&gt;claims['exp'] <span class="nt">&lt; time</span><span class="err">()<
 
 <p>Step 4 involves downloading the public JWKS from Okta (specified by the <code class="highlighter-rouge">jwks_uri</code> property in the <a href="/docs/api/resources/oauth2.html#authorization-server-metadata">authorization server metadata</a>. The result of this call is a <a href="https://tools.ietf.org/html/rfc7517">JSON Web Key</a> set.</p>
 
-<p>An <code class="highlighter-rouge">id_token</code> contains a <a href="https://tools.ietf.org/html/rfc7517#section-4.5">public key id</a> (<code class="highlighter-rouge">kid</code>). To verify the signature, we use the <a href="http://developer.okta.com/docs/api/resources/oidc.html#openid-connect-discovery-document">Discovery Document</a> to find the <code class="highlighter-rouge">jwks_uri</code>, which will return a list of public keys. It is safe to cache or persist these keys for performance, but Okta rotates them periodically. We strongly recommend dynamically retrieving these keys.</p>
+<p>An <code class="highlighter-rouge">id_token</code> contains a <a href="https://tools.ietf.org/html/rfc7517#section-4.5">public key id</a> (<code class="highlighter-rouge">kid</code>). To verify the signature, we use the <a href="/docs/api/resources/oidc.html#openid-connect-discovery-document">Discovery Document</a> to find the <code class="highlighter-rouge">jwks_uri</code>, which will return a list of public keys. It is safe to cache or persist these keys for performance, but Okta rotates them periodically. We strongly recommend dynamically retrieving these keys.</p>
 
 <div class="language-php highlighter-rouge"><pre class="highlight"><code>$jwk = null;
 

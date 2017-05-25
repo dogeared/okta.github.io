@@ -42,8 +42,8 @@
   <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
   <title>Build a React Application with User Authentication in 15 Minutes | Okta Developer</title>
   <meta name="description" content="React has quickly become one of the most favored front-end web frameworks, and is second only to plain old HTML5, according to JAXenter. So it’s no surprise ...">
-  <link rel="canonical" href="http://developer.okta.com/blog/2017/03/30/react-okta-sign-in-widget">
-  <link rel="alternate" type="application/rss+xml" title="Okta Developer" href="http://developer.okta.com/feed.xml"><!-- GA -->
+  <link rel="canonical" href="https://developer.okta.com/blog/2017/03/30/react-okta-sign-in-widget">
+  <link rel="alternate" type="application/rss+xml" title="Okta Developer" href="https://developer.okta.com/feed.xml"><!-- GA -->
 </head>
 
     <body id="blog">
@@ -79,12 +79,12 @@
                 </div>
               </li>
             </ul>
-            <form id="form_search" method="get" action="http://developer.okta.com/search/" name="form_search">
+            <form id="form_search" method="get" action="/search/" name="form_search">
               <input type="text" name="q" id="q" autocomplete="off">
             </form>
           </div>
           <div id="mobile-nav">
-            <a id="mobile-search" href="http://developer.okta.com/search/"><span class="icon-search-light"></span></a>
+            <a id="mobile-search" href="/search/"><span class="icon-search-light"></span></a>
             <a id="mobile-open" class="mobile-toggle" href="#top-nav">
               <span></span>
               <span></span>
@@ -136,7 +136,7 @@
 	    <section class="post-content">
 	     <p>React has quickly become one of the most favored front-end web frameworks, and is second only to plain old HTML5, <a href="https://jaxenter.com/technology-trends-2017-top-frameworks-131993.html">according to JAXenter</a>. So it’s no surprise that <a href="https://www.lynda.com/React-js-training-tutorials/7049-0.html">developers are learning it</a>, and <a href="https://stackoverflow.com/jobs?sort=i&amp;q=ReactJS">employers are asking for it</a>.</p>
 
-<p>In this tutorial, you’ll start with a very simple React app with a couple of pages and some routing built in, and add authentication using <a href="http://developer.okta.com/code/javascript/okta_sign-in_widget">Okta’s Sign-In Widget</a>. The Sign-In Widget is an embeddable Javascript widget that allows developers to use Okta’s secure, scalable architecture with a minimum of effort from within React applications. Let’s get started!</p>
+<p>In this tutorial, you’ll start with a very simple React app with a couple of pages and some routing built in, and add authentication using <a href="/code/javascript/okta_sign-in_widget">Okta’s Sign-In Widget</a>. The Sign-In Widget is an embeddable Javascript widget that allows developers to use Okta’s secure, scalable architecture with a minimum of effort from within React applications. Let’s get started!</p>
 <h2 id="get-the-simple-react-seed-project">Get the Simple React Seed Project</h2>
 <p>Start by cloning the simple React seed project.</p>
 
@@ -162,7 +162,7 @@ npm start
 <p><img src="/assets/blog/react-sign-in-widget/Okta-Widget-NPM-Modules-Screener-793639e55e4967b968ae363f1af37e4f1ec426d08fb0fe2ea7300459d84d3c87.png" alt="Okta in node_modules" /></p>
 
 <p>Then add the styles for the widget in your <code class="highlighter-rouge">index.html</code> file from the Okta CDN:</p>
-<div class="language-html highlighter-rouge"><pre class="highlight"><code>    <span class="nt">&lt;link</span> 
+<div class="language-html highlighter-rouge"><pre class="highlight"><code>    <span class="nt">&lt;link</span>
      <span class="na">href=</span><span class="s">"https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/1.9.0/css/okta-sign-in.min.css"</span>
       <span class="na">type=</span><span class="s">"text/css"</span>
       <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">/&gt;</span>
@@ -202,9 +202,9 @@ npm start
 </span></code></pre>
 </div>
 <h2 id="add-the-openid-connect-application-in-okta">Add the OpenID Connect Application in Okta</h2>
-<p>In order to <em>use</em> Okta as your OpenID Connect provider for authentication, you’ll need to set up an application in the <a href="http://developer.okta.com/">Okta developer portal</a>.</p>
+<p>In order to <em>use</em> Okta as your OpenID Connect provider for authentication, you’ll need to set up an application in the <a href="/">Okta developer portal</a>.</p>
 
-<p>So log in to your Okta account, [or create one](http://developer.okta.com] if you haven’t yet. Navigate to Admin &gt; Add Applications and click on the Create New App button. Select Single Page App (SPA) for Platform and OpenID Connect for the sign on method. Click the Create button and give your application a name. On the next screen, add <code class="highlighter-rouge">http://localhost:3000</code> as a Redirect URI and click Finish. You should see settings like the following.</p>
+<p>So log in to your Okta account, [or create one](https://developer.okta.com] if you haven’t yet. Navigate to Admin &gt; Add Applications and click on the Create New App button. Select Single Page App (SPA) for Platform and OpenID Connect for the sign on method. Click the Create button and give your application a name. On the next screen, add <code class="highlighter-rouge">http://localhost:3000</code> as a Redirect URI and click Finish. You should see settings like the following.</p>
 
 <p><img src="/assets/blog/react-sign-in-widget/Okta-Developer-Portal-OIDC-App-Screener-757b218884250a613b267c5d2c0b2a01292d96efd85a0c0706cc50e39ac6779d.png" alt="OIDC Application Settings" width="800" /></p>
 
@@ -344,7 +344,7 @@ npm start
 
   <span class="nx">showLogin</span><span class="p">(){</span>
     <span class="nx">Backbone</span><span class="p">.</span><span class="nx">history</span><span class="p">.</span><span class="nx">stop</span><span class="p">();</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">widget</span><span class="p">.</span><span class="nx">renderEl</span><span class="p">({</span><span class="na">el</span><span class="p">:</span><span class="k">this</span><span class="p">.</span><span class="nx">loginContainer</span><span class="p">},</span> 
+    <span class="k">this</span><span class="p">.</span><span class="nx">widget</span><span class="p">.</span><span class="nx">renderEl</span><span class="p">({</span><span class="na">el</span><span class="p">:</span><span class="k">this</span><span class="p">.</span><span class="nx">loginContainer</span><span class="p">},</span>
       <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
         <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span><span class="na">user</span><span class="p">:</span> <span class="nx">response</span><span class="p">.</span><span class="nx">claims</span><span class="p">.</span><span class="nx">email</span><span class="p">});</span>
       <span class="p">},</span>

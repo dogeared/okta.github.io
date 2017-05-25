@@ -35,8 +35,8 @@
   <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
   <title>How To Share Application Key Credentials | Okta Developer</title>
   <meta name="description" content="How to share application key credentials between apps">
-  <link rel="canonical" href="http://developer.okta.com/docs/how-to/sharing-cert.html">
-  <link rel="alternate" type="application/rss+xml" title="Okta Developer" href="http://developer.okta.com/feed.xml"><!-- GA -->
+  <link rel="canonical" href="https://developer.okta.com/docs/how-to/sharing-cert.html">
+  <link rel="alternate" type="application/rss+xml" title="Okta Developer" href="https://developer.okta.com/feed.xml"><!-- GA -->
 </head>
 
 <body>
@@ -74,12 +74,12 @@
                 </div>
               </li>
             </ul>
-            <form id="form_search" method="get" action="http://developer.okta.com/search/" name="form_search">
+            <form id="form_search" method="get" action="/search/" name="form_search">
               <input type="text" name="q" id="q" autocomplete="off">
             </form>
           </div>
           <div id="mobile-nav">
-            <a id="mobile-search" href="http://developer.okta.com/search/"><span class="icon-search-light"></span></a>
+            <a id="mobile-search" href="/search/"><span class="icon-search-light"></span></a>
             <a id="mobile-open" class="mobile-toggle" href="#top-nav">
               <span></span>
               <span></span>
@@ -186,17 +186,17 @@
         <a id="edit-link" href="https://github.com/okta/okta.github.io/edit/master/_source/_docs/how-to/sharing-cert.md">Edit Page</a>
       <h1 id="share-application-key-credentials-between-apps">Share Application Key Credentials Between Apps</h1>
 
-<p><a href="http://developer.okta.com/docs/api/resources/apps.html#application-key-credential-model">Application key credential objects</a> 
+<p><a href="/docs/api/resources/apps.html#application-key-credential-model">Application key credential objects</a>
 contain an opaque key ID (<code class="highlighter-rouge">kid</code>) and corresponding certificate.
-To use the <a href="http://developer.okta.com/docs/api/resources/apps.html#clone-key-credential-for-application">API</a> 
-to share application key credentials between apps, you need to create and use a new credential in one app, 
+To use the <a href="/docs/api/resources/apps.html#clone-application-key-credential">API</a>
+to share application key credentials between apps, you need to create and use a new credential in one app,
 then share and update the credential in another app.</p>
 
-<p>Sharing certificates is useful for Okta orgs that have apps with <a href="http://developer.okta.com/docs/api/resources/apps.html#signon-modes">sign-on modes</a> <code class="highlighter-rouge">SAML_2_0</code>, SAML 1.1, or <code class="highlighter-rouge">WS_FEDERATION</code>.</p>
+<p>Sharing certificates is useful for Okta orgs that have apps with <a href="/docs/api/resources/apps.html#signon-modes">sign-on modes</a> <code class="highlighter-rouge">SAML_2_0</code>, SAML 1.1, or <code class="highlighter-rouge">WS_FEDERATION</code>.</p>
 
 <h3 id="why-should-i-do-this">Why Should I Do This?</h3>
 
-<p>When configuring multiple apps, you might need them to accept the same identity provider (IdP). 
+<p>When configuring multiple apps, you might need them to accept the same identity provider (IdP).
 In that case, the assertions from the two apps must be signed by the same key.</p>
 
 <h3 id="prerequisite">Prerequisite</h3>
@@ -205,7 +205,7 @@ In that case, the assertions from the two apps must be signed by the same key.</
 
 <h3 id="how-to-share-the-certificate">How to Share the Certificate</h3>
 
-<p>For this example, assume that you want to share a certificate between two instances of an app: <code class="highlighter-rouge">app1</code> is the source app, the app from 
+<p>For this example, assume that you want to share a certificate between two instances of an app: <code class="highlighter-rouge">app1</code> is the source app, the app from
 which you wish to share a certificate, and <code class="highlighter-rouge">app2</code> is the target app, the app that receives the source app’s certificate.</p>
 
 <p>This example also works if the apps are two instances of the same app, or two different apps.</p>
@@ -218,7 +218,7 @@ which you wish to share a certificate, and <code class="highlighter-rouge">app2<
 
 <p>Response:</p>
 
-<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="w">         
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="w">
 </span><span class="p">{</span><span class="w">
   </span><span class="nt">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-09-30T20:36:15.000Z"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"lastUpdated"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-09-30T20:36:15.000Z"</span><span class="p">,</span><span class="w">
@@ -259,7 +259,7 @@ which you wish to share a certificate, and <code class="highlighter-rouge">app2<
 
 <h4 id="2-update-the-source-app-to-use-the-new-certificate">2. Update the source app to use the new certificate</h4>
 
-<p>Update the source app with the application key credential’s ID, <code class="highlighter-rouge">kid</code> so that the source app 
+<p>Update the source app with the application key credential’s ID, <code class="highlighter-rouge">kid</code> so that the source app
 uses the new credential to sign assertions.</p>
 
 <p>Request: <code class="highlighter-rouge">PUT /api/v1/apps/0oa8ae1t5yev2ajDs0h7</code></p>
@@ -278,7 +278,7 @@ uses the new credential to sign assertions.</p>
 
 <p>Response:</p>
 
-<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="w"> 
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="w">
 </span><span class="p">{</span><span class="w">
   </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0oa8ae1t5yev2ajDs0h7"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"myorg_app1"</span><span class="p">,</span><span class="w">
