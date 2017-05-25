@@ -14,7 +14,7 @@ You can now create SAML and SWA custom apps using the Apps API. Previously you h
 using the [**App Integration Wizard**](https://support.okta.com/help/articles/Knowledge_Article/Using-the-App-Integration-Wizard)
 in the OKTA user interface.
 
-For more information about creating custom apps with the API, see [Apps API: Add Custom SAML Application](/docs/api/resources/apps.html#add-saml-20-application).
+For more information about creating custom apps with the API, see [Apps API: Add Custom SAML Application](/docs/api/resources/apps.html#add-custom-saml-application).
 
 ## Feature Enhancements
 

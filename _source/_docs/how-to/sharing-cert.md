@@ -8,7 +8,7 @@ excerpt: How to share application key credentials between apps
 
 [Application key credential objects](/docs/api/resources/apps.html#application-key-credential-model)
 contain an opaque key ID (`kid`) and corresponding certificate.
-To use the [API](/docs/api/resources/apps.html#clone-key-credential-for-application)
+To use the [API](/docs/api/resources/apps.html#clone-application-key-credential)
 to share application key credentials between apps, you need to create and use a new credential in one app,
 then share and update the credential in another app.
 

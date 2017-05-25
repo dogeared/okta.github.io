@@ -165,7 +165,7 @@ Response:
 
 #### Step 3 – Update the key credential for the app to specify the new signing key id.
 
-Call the [Apps API](/docs/api/resources/apps.html#app-id) with the app ID you obtained in step 1. In the body, include
+Call the [Apps API](/docs/api/resources/apps.html#update-key-credential-for-application) with the app ID you obtained in step 1. In the body, include
 the app name and the app label that you obtained in step 1, the key ID that you obtained in step 2, and the value *SAML_2_0* for the sign on mode.
 
 Request:
