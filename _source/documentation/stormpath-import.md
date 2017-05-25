@@ -279,7 +279,7 @@ What your imported Custom Data looks like depends primarily on whether is a simp
 <a name="simple-custom-data"></a>
 ##### Simple Custom Data
 
-Any Custom Data attributes are imported and added to a user's profile as custom schema properties. For more on the Okta User Profile Schema go here: /docs/api/resources/schemas.html#schema-properties
+Any Custom Data attributes are imported and added to a user's profile as custom schema properties. For more on the Okta User Profile Schema go here: https://developer.okta.com/docs/api/resources/schemas.html#schema-properties
 
 This Account Custom Data in Stormpath:
 

@@ -17,7 +17,7 @@ To use these collections, you'll need to set up your environment, import the col
 
 1. [Create an API token](getting_a_token.html){:target="_blank"}.
 2. [Install the Postman App](https://www.getpostman.com/apps){:target="_blank"}.
-3. Launch Postman and click the 'import button'. Select import from link, and paste this link into the textbox: `/docs/api/postman/example.oktapreview.com.environment`
+3. Launch Postman and click the 'import button'. Select import from link, and paste this link into the textbox: `https://developer.okta.com/docs/api/postman/example.oktapreview.com.environment`
     {% img import_enviro.png alt:"Importing the Okta Example Environment" %}
 
 4. Once you have clicked import, make sure the `example.oktapreview.com` environment is selected.
